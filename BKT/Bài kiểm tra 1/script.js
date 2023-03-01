@@ -3,11 +3,10 @@ const so_b = document.querySelector("#so_b");
 const result = document.querySelector("#result");
 const KQ = document.querySelector(".KQ");
 function SNT(n) {
-  if (n === 2 || n === 3) return true;
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) return false;
   }
-  return true;
+  return n > 1;
 }
 
 KQ.addEventListener("click", function () {
